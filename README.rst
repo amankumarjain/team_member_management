@@ -26,23 +26,17 @@ Installing and setup project from scratch in isolated evv(virtualenv)
 ----------
 1. Install and create virtual env like this::
 
-    ```
     sudo apt-get install python3-pip
     pip3 install virtualenv
     virtualenv {project_name}
-    ```
 
 2. Activate virtual env like this::
 
-    ```
     source {path/to/virtualenv}/bin/activate
-    ```
 
 3. Clone repository::
 
-    ```
     git clone https://github.com/amankumarjain/team_member_management.git
-    ```
 
 3. Inside virtualenv run *pip install -r requirements.txt* to download all related packages.
 
@@ -56,43 +50,33 @@ Running or Testing on Live Running Projects
 -----------
 1. This will create a new member instance::
 
-```
-curl -X POST \
-"https://www.codersbyte.xyz/api/v1/members/" \
--H 'content-type: application/json' \
--d '{"first_name":"Aman", "last_name":"Jain", "phone_number":"8867998100", "email":"admin@codersbyte.in", "role": 1}'
-```
+    curl -X POST \
+    "https://www.codersbyte.xyz/api/v1/members/" \
+    -H 'content-type: application/json' \
+    -d '{"first_name":"Aman", "last_name":"Jain", "phone_number":"8867998100", "email":"admin@codersbyte.in", "role": 1}'
 
 2. Return a list of all the existing members::
 
-```
-curl -X GET \
-https://www.codersbyte.xyz/api/v1/members/ \
--H 'content-type: application/json' \
-```
+    curl -X GET \
+    https://www.codersbyte.xyz/api/v1/members/ \
+    -H 'content-type: application/json' \
 
 3. Return the given member::
 
-```
-curl -X GET \
-"https://www.codersbyte.xyz/api/v1/members/31376e06-69a5-47fd-b357-b603cbfb9fba/" \
--H 'content-type: application/json' \
-```
+    curl -X GET \
+    "https://www.codersbyte.xyz/api/v1/members/31376e06-69a5-47fd-b357-b603cbfb9fba/" \
+    -H 'content-type: application/json' \
 
 4. Update the given member::
 
-```
-curl -X PUT \
-"https://www.codersbyte.xyz/api/v1/members/" \
--H 'content-type: application/json' \
--d '{"first_name":"Aman", "last_name":"Jain", "phone_number":"8867998100", "email":"admin@codersbyte.in", "role": 1}'
-```
+    curl -X PUT \
+    "https://www.codersbyte.xyz/api/v1/members/" \
+    -H 'content-type: application/json' \
+    -d '{"first_name":"Aman", "last_name":"Jain", "phone_number":"8867998100", "email":"admin@codersbyte.in", "role": 1}'
 
 5. Update partial field for given member::
 
-```
-curl -X PATCH \
-"https://www.codersbyte.xyz/api/v1/members/" \
--H 'content-type: application/json' \
--d '{"first_name":"Aman", "last_name":"Jain", "phone_number":"8867998100", "email":"admin@codersbyte.in", "role": 1}'
-```
+    curl -X PATCH \
+    "https://www.codersbyte.xyz/api/v1/members/" \
+    -H 'content-type: application/json' \
+    -d '{"first_name":"Aman", "last_name":"Jain", "phone_number":"8867998100", "email":"admin@codersbyte.in", "role": 1}'
