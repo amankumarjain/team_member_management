@@ -54,7 +54,7 @@ Detailed documentation is in the "docs" directory.
 
 Running or Testing on Live Running Projects
 -----------
-**This will create a new member instance**
+1. This will create a new member instance
 ```
 curl -X POST \
 "https://www.codersbyte.xyz/api/v1/members/" \
@@ -62,21 +62,21 @@ curl -X POST \
 -d '{"first_name":"Aman", "last_name":"Jain", "phone_number":"8867998100", "email":"admin@codersbyte.in", "role": 1}'
 ```
 
-**Return a list of all the existing members**
+2. Return a list of all the existing members
 ```
 curl -X GET \
 https://www.codersbyte.xyz/api/v1/members/ \
 -H 'content-type: application/json' \
 ```
 
-**Return the given member**
+3. Return the given member
 ```
 curl -X GET \
 "https://www.codersbyte.xyz/api/v1/members/31376e06-69a5-47fd-b357-b603cbfb9fba/" \
 -H 'content-type: application/json' \
 ```
 
-**Update the given member**
+4. Update the given member
 ```
 curl -X PUT \
 "https://www.codersbyte.xyz/api/v1/members/" \
@@ -84,8 +84,8 @@ curl -X PUT \
 -d '{"first_name":"Aman", "last_name":"Jain", "phone_number":"8867998100", "email":"admin@codersbyte.in", "role": 1}'
 ```
 
-**Update partial field for given member**
->```
+5. Update partial field for given member
+```
 curl -X PATCH \
 "https://www.codersbyte.xyz/api/v1/members/" \
 -H 'content-type: application/json' \
